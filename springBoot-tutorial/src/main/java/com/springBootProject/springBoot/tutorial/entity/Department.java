@@ -4,6 +4,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+import org.hibernate.validator.constraints.Length;
 
 @Entity
 public class Department {
@@ -11,8 +15,14 @@ public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long departmentId;
+
+    @NotBlank(message = "Department Name is a required field!")
+    @Length(max = 10, min = 3)
+    @Size(max = 10, min = 1)
+    @Email
     private String departmentName;
     private String departmentAddress;
+    @Length(max = 6, min = 3)
     private String departmentCode;
 
     public Department(long departmentId, String departmentName, String departmentAddress, String departmentCode) {
