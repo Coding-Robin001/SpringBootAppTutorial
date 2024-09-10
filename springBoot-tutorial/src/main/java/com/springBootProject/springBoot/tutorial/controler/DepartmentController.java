@@ -31,7 +31,7 @@ public class DepartmentController {
    }
 
    @GetMapping("/department/{id}")
-    public Department fetchDepartmentById(@PathVariable("id") Long departmentId){
+    public Department fetchDepartmentById(@PathVariable("id") Long departmentId)throws Exception{
         return departmentService.fetchDepartmentById(departmentId);
    }
 
