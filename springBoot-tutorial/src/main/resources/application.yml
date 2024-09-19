@@ -1,0 +1,56 @@
+server:
+  port: 8082
+
+spring:
+  profiles:
+    active:dev
+
+---
+
+spring:
+  profile: dev
+  application:
+    name: springBoot-tutorial
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: Adewole171200
+    url: jdbc:mysql://localhost:3306/dcbapp
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+---
+
+spring:
+  profile: qa
+  application:
+    name: springBoot-tutorial
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: Adewole171200
+    url: jdbc:mysql://localhost:3306/dcbapp-qa
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+---
+
+spring:
+  profile: prod
+  application:
+    name: springBoot-tutorial
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: Adewole171200
+    url: jdbc:mysql://localhost:3306/dcbapp-prod
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
