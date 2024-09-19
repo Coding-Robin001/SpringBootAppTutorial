@@ -6,7 +6,6 @@ spring:
     active:dev
 
 ---
-
 spring:
   profile: dev
   application:
@@ -23,7 +22,6 @@ spring:
 
 
 ---
-
 spring:
   profile: qa
   application:
