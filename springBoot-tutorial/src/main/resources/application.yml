@@ -25,6 +25,7 @@ spring:
       web:
         exposure:
           include: "*"
+          exclude: "env,beans"
 
 
 ---
